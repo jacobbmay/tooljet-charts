@@ -1,3 +1,5 @@
+imagePullSecrets: []
+
 apps:
   tooljet:
     replicaCount: 1

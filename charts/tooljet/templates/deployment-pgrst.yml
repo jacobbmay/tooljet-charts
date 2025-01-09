@@ -23,6 +23,10 @@ spec:
         app.kubernetes.io/instance: tooljet-postgrest
         app.kubernetes.io/name: tooljet-postgrest
     spec:
+      {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml .Values.imagePullSecrets | nindent 8 }}
+      {{- end }}
       containers:
         - name: postgrest
           image: "{{ .Values.postgrest.image.repository }}:{{ .Values.postgrest.image.tag }}"
