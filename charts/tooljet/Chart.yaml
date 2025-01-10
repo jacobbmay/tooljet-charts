@@ -15,10 +15,10 @@ maintainers:
 
 dependencies:
   - name: postgresql
-    version: "11.6.19"
+    version: ~15.5
     repository: oci://registry-1.docker.io/bitnamicharts
     condition: postgresql.enabled
   - name: redis
-    version: "16.13.2"
+    version: ~19.5
     repository: oci://registry-1.docker.io/bitnamicharts
     condition: redis.enabled
